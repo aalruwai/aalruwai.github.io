@@ -1,19 +1,1264 @@
-<html>
-<title>
-  First website
-  </title/>
+<!--Name: Alruwaili, Abdulaziz Abdullah
+    Student ID: 212545087-->
+
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="JquerMobile/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
+    <script src="JquerMobile/jquery-1.11.1.min.js" >   </script>
+    <script src="JquerMobile/jquery.mobile-1.4.5.min.js" > </script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+     <title>Aziz Restaurant</title>
+    <script>
+        var myCenter = new google.maps.LatLng(-37.847828, 145.114869);
+        var marker;
+
+        function initialize() {
+            var mapProp = {
+                center: myCenter,
+                zoom: 15,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+            var marker = new google.maps.Marker({
+                position: myCenter,
+                animation: google.maps.Animation.BOUNCE
+            });
+            marker.setMap(map);
+
+            var infowindow = new google.maps.InfoWindow({
+                content: "   <br/>  <hr> Pizoo    "
+            });
+            infowindow.open(map, marker);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</head>
+<body>
   
-  <body>
-    <h1>This is my first webpage</h1>
-    </body>
+
+    <!---------------------------------------------------------------->
+    <!--Start Home Page-->
+    <!---------------------------------------------------------------->
+    <div id="home" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header"   data-position="fixed">
+            <h2>Pizoo</h2>
+        </div>
+        <!--End header-->
+        <center>
+            <img src="img/logo.png" alt="Aziz Restaurant" />
+        </center>
+      
+        <!--Start content-->    
+        <div data-role="content" class="content">
+
+            <h2>Welcom To The WebSite</h2>
+            <!--Start button-->
+            <div class="content">
+                <a data-role="button" data-icon="bullets" data-transition="slide" href="#Menu">Menu</a>
+                <a data-role="button" data-icon="location" data-transition="slide" href="#Navigation">Navgation</a>
+                <a data-role="button" data-icon="mail" data-transition="slide" href="#FeedBack">FeedBack</a>
+                <a data-role="button" data-icon="user" data-transition="slide" href="#Developer">Developer</a>
+                <a data-role="button" data-icon="phone" data-transition="slide" href="#Click-To-Call">Click-To-Call</a>
+            </div>   <!--End button-->
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End Home Page-->
+    <!---------------------------------------------------------------->
+
+   
+
+
+    <!---------------------------------------------------------------->
+    <!--Start Menu Page-->
+    <!---------------------------------------------------------------->
+    <div id="Menu" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#home">Home</a>            
+            <h1>Menu</h1>
+        </div>
+        <!--End header-->
+        <!--Start content-->
+        <div data-role="content" class="content">
+            <center>
+                <img src="img/menu.png" />
+            </center> 
+            <!--Start ul-->
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#Appetizer"><img src="img/Apatizer.jpg" alt="Aziz Restaurant" /><h2>Appetizer</h2></a></li>
+                <li><a href="#desserts"><img src="img/desserts.jpg" alt="Aziz Restaurant" /><h2>Desserts</h2></a></li>
+                <li><a href="#Drinks"><img src="img/Drinks.jpg" alt="Aziz Restaurant" /><h2>Drinks</h2></a></li>
+                <li><a href="#Meals"><img src="img/Meals.jpg" alt="Aziz Restaurant" /><h2>Meals</h2></a></li>
+            </ul>
+              <!--End ul-->
+
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End Menu Page-->
+    <!---------------------------------------------------------------->
+
+  
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start Appetizer Page-->
+    <!---------------------------------------------------------------->
+    <div id="Appetizer" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#Menu">Home</a>
+            <h1>Appetizer</h1>
+        </div>
+        <!--End header-->
+        <!--Start content-->
+        <div data-role="content" class="content">         
+            <!--Start ul-->
+            <ul data-role="listview" data-filter="true" data-filter-placeholder="Search Appetizer..." data-inset="true">
+                <li><a data-transition="slide" href="#Appetizer1">Japanese Pulled Chicken Salad</a></li>
+                <li><a data-transition="slide" href="#Appetizer2">Herb Bread with Hummus and Olives</a></li>
+                <li><a data-transition="slide" href="#Appetizer3">Lamb Ribs</a></li>
+                <li><a data-transition="slide" href="#Appetizer4">Ciabatta (Herb & Garlic)</a></li>
+                <li><a data-transition="slide" href="#Appetizer5">Spicy Korean Prawn Salad</a></li>
+                <li><a data-transition="slide" href="#Appetizer6">Pear & Gorgonzola Salad</a></li>
+            </ul>
+            <!--End ul-->
+
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End Appetizer Page-->
+    <!---------------------------------------------------------------->
+
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start Appetizer 1 Page-->
+    <!---------------------------------------------------------------->
+    <div id="Appetizer1" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#Appetizer">Appetizer</a>
+            <h1>Japanese Pulled Chicken Salad</h1>
+        </div>
+        <!--End header-->
+        <!--Start content-->       
+        <div data-role="content" class="content">
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3>Japanese Pulled Chicken Salad</h3>               
+                <img src="img/1.jpg" />
+               <p>Pulled Chicken Salad with Slaw, Rocket, Cashews, Red Onion, Spring Onion and Chilli garnished with Japanese style dressing & Sesame Seeds</p>               
+                 <h3 class="ui-bar ui-bar-a" style="color: #b70404;">Price : $13.50</h3>              
+                <label for="slider-1">Rate:</label>
+                <input type="range" name="slider-1" id="slider-1" min="0" max="5" value="3" data-popup-enabled="true">    
+                <label for="number-1">Quantity:</label>
+                <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="">   
+                <a href="#positionSelectorAppetizer1" class="ui-btn ui-corner-all ui-shadow ui-btn-inline"
+                   data-rel="popup" data-position-to="#position-header">Click To Order</a>
+                <div data-role="popup" id="positionSelectorAppetizer1" class="ui-content" data-theme="a">
+                    <p> Your order completed..</p>
+                </div>
+            </div>                             
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End Appetizer 1 Page-->
+    <!---------------------------------------------------------------->
+
+
+
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start Appetizer 2 Page-->
+    <!---------------------------------------------------------------->
+    <div id="Appetizer2" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#Appetizer">Appetizer</a>
+            <h1>Herb Bread with Hummus and Olives</h1>
+        </div>
+        <!--End header-->
+        <!--Start content-->
+        <div data-role="content" class="content">
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3>Herb Bread with Hummus and Olives</h3>
+                <img src="img/2.jpg" />
+                <p>Herb Bread served with Harrisa Infused Hummus & Kalamata Olives</p>
+                <h3 class="ui-bar ui-bar-a" style="color: #b70404;">Price : $10.50</h3>
+                <label for="slider-1">Rate:</label>
+                <input type="range" name="slider-1" id="slider-1" min="0" max="5" value="3" data-popup-enabled="true">
+                <label for="number-1">Quantity:</label>
+                <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="">
+                
+                <a href="#positionSelectorAppetizer2" class="ui-btn ui-corner-all ui-shadow ui-btn-inline"
+                   data-rel="popup" data-position-to="#position-header">Click To Order</a>
+                <div data-role="popup" id="positionSelectorAppetizer2" class="ui-content" data-theme="a">
+                    <p> Your order completed..</p>
+                </div>
+            </div>
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End Appetizer 2 Page-->
+    <!---------------------------------------------------------------->
+
+
+
+
+
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start Appetizer 3 Page-->
+    <!---------------------------------------------------------------->
+    <div id="Appetizer3" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#Appetizer">Appetizer</a>
+            <h1>Lamb Ribs</h1>
+        </div>
+        <!--End header-->
+        <!--Start content-->
+        <div data-role="content" class="content">
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3>Lamb Ribs</h3>
+                <img src="img/3.jpg" />
+                <p>6 Mediterranean Spiced Tender Ribs served with Fresh Herbs & Lemon</p>
+                <h3 class="ui-bar ui-bar-a" style="color: #b70404;">Price : $13.50</h3>
+                <label for="slider-1">Rate:</label>
+                <input type="range" name="slider-1" id="slider-1" min="0" max="5" value="3" data-popup-enabled="true">
+                <label for="number-1">Quantity:</label>
+                <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="">
+                <a href="#positionSelectorAppetizer3" class="ui-btn ui-corner-all ui-shadow ui-btn-inline"
+                   data-rel="popup" data-position-to="#position-header">Click To Order</a>
+                <div data-role="popup" id="positionSelectorAppetizer3" class="ui-content" data-theme="a">
+                    <p> Your order completed..</p>
+                </div>
+            </div>
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End Appetizer 3 Page-->
+    <!---------------------------------------------------------------->
+
+
+
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start Appetizer 4 Page-->
+    <!---------------------------------------------------------------->
+    <div id="Appetizer4" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#Appetizer">Appetizer</a>
+            <h1>Ciabatta (Herb & Garlic)</h1>
+        </div>
+        <!--End header-->
+        <!--Start content-->
+        <div data-role="content" class="content">
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3>Ciabatta (Herb & Garlic)</h3>
+                <img src="img/4.jpg" />
+                <p>Ciabatta loaf served with Herb & Garlic Butter</p>
+                <h3 class="ui-bar ui-bar-a" style="color: #b70404;">Price : $5.50</h3>
+                <label for="slider-1">Rate:</label>
+                <input type="range" name="slider-1" id="slider-1" min="0" max="5" value="3" data-popup-enabled="true">
+                <label for="number-1">Quantity:</label>
+                <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="">
+                <a href="#positionSelectorAppetizer4" class="ui-btn ui-corner-all ui-shadow ui-btn-inline"
+                   data-rel="popup" data-position-to="#position-header">Click To Order</a>
+                <div data-role="popup" id="positionSelectorAppetizer4" class="ui-content" data-theme="a">
+                    <p> Your order completed..</p>
+                </div>
+            </div>
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End Appetizer 4 Page-->
+    <!---------------------------------------------------------------->
+
+
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start Appetizer 5 Page-->
+    <!---------------------------------------------------------------->
+    <div id="Appetizer5" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#Appetizer">Appetizer</a>
+            <h1>Spicy Korean Prawn Salad</h1>
+        </div>
+        <!--End header-->
+        <!--Start content-->
+        <div data-role="content" class="content">
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3>Spicy Korean Prawn Salad</h3>
+                <img src="img/5.jpg" />
+                <p>Prawns with Rocket, Slaw, Spring Onions, Coriander, Kimchi & Chilli, garnished with Aioli & Sesame Seeds</p>
+                <h3 class="ui-bar ui-bar-a" style="color: #b70404;">Price : $13.50</h3>
+                <label for="slider-1">Rate:</label>
+                <input type="range" name="slider-1" id="slider-1" min="0" max="5" value="3" data-popup-enabled="true">
+                <label for="number-1">Quantity:</label>
+                <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="">
+                <a href="#positionSelectorAppetizer5" class="ui-btn ui-corner-all ui-shadow ui-btn-inline"
+                   data-rel="popup" data-position-to="#position-header">Click To Order</a>
+                <div data-role="popup" id="positionSelectorAppetizer5" class="ui-content" data-theme="a">
+                    <p> Your order completed..</p>
+                </div>
+            </div>
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End Appetizer 5 Page-->
+    <!---------------------------------------------------------------->
+
+
+
     
-    <style>
-    body {
-      background.color:green;
-      color:#fff;
-      text-align:center;
-    }
+
+    <!---------------------------------------------------------------->
+    <!--Start Appetizer 6 Page-->
+    <!---------------------------------------------------------------->
+    <div id="Appetizer6" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#Appetizer">Appetizer</a>
+            <h1>Pear & Gorgonzola Salad</h1>
+        </div>
+        <!--End header-->
+        <!--Start content-->
+        <div data-role="content" class="content">
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3>Pear & Gorgonzola Salad</h3>
+                <img src="img/6.jpg" />
+                <p>Fresh Pear, Gorgonzola & Wild Rocket topped with Crushed Walnuts served with Balsamic EVOO</p>
+                <h3 class="ui-bar ui-bar-a" style="color: #b70404;">Price : $8.50</h3>
+                <label for="slider-1">Rate:</label>
+                <input type="range" name="slider-1" id="slider-1" min="0" max="5" value="3" data-popup-enabled="true">
+                <label for="number-1">Quantity:</label>
+                <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="">
+                <a href="#positionSelectorAppetizer6" class="ui-btn ui-corner-all ui-shadow ui-btn-inline"
+                   data-rel="popup" data-position-to="#position-header">Click To Order</a>
+                <div data-role="popup" id="positionSelectorAppetizer6" class="ui-content" data-theme="a">
+                    <p> Your order completed..</p>
+                </div>
+            </div>
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End Appetizer 6 Page-->
+    <!---------------------------------------------------------------->
+
+
+
+
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start desserts Page-->
+    <!---------------------------------------------------------------->
+    <div id="desserts" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#Menu">Home</a>
+            <h1>desserts</h1>
+        </div>
+        <!--End header-->
+        <!--Start content-->
+        <div data-role="content" class="content">
+            <!--Start ul-->
+            <ul data-role="listview" data-filter="true" data-filter-placeholder="Search desserts..." data-inset="true">
+                <li><a href="#desserts1">Elvis Crumble</a></li>
+                <li><a href="#desserts2">Black Forest Crumble</a></li>
+                <li><a href="#desserts3">HERSHEY'S TRIPLE CHOCOLATE</a></li>              
+            </ul>
+            <!--End ul-->
+
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End desserts Page-->
+    <!---------------------------------------------------------------->
+
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start desserts 1 Page-->
+    <!---------------------------------------------------------------->
+    <div id="desserts1" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#desserts">Appetizer</a>
+            <h1>Elvis Crumble</h1>
+        </div>
+        <!--End header-->
+        <!--Start content-->
+        <div data-role="content" class="content">
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3>Elvis Crumble</h3>
+                <img src="img/1-1.jpg" />
+                <p>(Serves 2) Dessert Pizza layered with Banana Chocolate Chip Cake, Caramel Peanut-butter, topped with Baked Crumble, Fresh Banana & dusted with Icing Sugar</p>
+                <h3 class="ui-bar ui-bar-a" style="color: #b70404;">Price : $11.50</h3>
+                <label for="slider-1">Rate:</label>
+                <input type="range" name="slider-1" id="slider-1" min="0" max="5" value="3" data-popup-enabled="true">
+                <label for="number-1">Quantity:</label>
+                <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="">
+                <a href="#positionSelectordesserts1" class="ui-btn ui-corner-all ui-shadow ui-btn-inline"
+                   data-rel="popup" data-position-to="#position-header">Click To Order</a>
+                <div data-role="popup" id="positionSelectordesserts1" class="ui-content" data-theme="a">
+                    <p> Your order completed..</p>
+                </div>
+            </div>
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End desserts 1 Page-->
+    <!---------------------------------------------------------------->
+
+
+
+
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start desserts 2 Page-->
+    <!---------------------------------------------------------------->
+    <div id="desserts2" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#desserts">Appetizer</a>
+            <h1>Black Forest Crumble</h1>
+        </div>
+        <!--End header-->
+        <!--Start content-->
+        <div data-role="content" class="content">
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3>Black Forest Crumble</h3>
+                <img src="img/1-2.jpg" />
+                <p>(Serves 2) Dessert Pizza layered with Custard, Mud Cake, Black Cherries, topped with Baked Crumble, drizzled with Berry Coulis & dusted with Icing Sugar</p>
+                <h3 class="ui-bar ui-bar-a" style="color: #b70404;">Price : $11.50</h3>
+                <label for="slider-1">Rate:</label>
+                <input type="range" name="slider-1" id="slider-1" min="0" max="5" value="3" data-popup-enabled="true">
+                <label for="number-1">Quantity:</label>
+                <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="">
+                <a href="#positionSelectordesserts2" class="ui-btn ui-corner-all ui-shadow ui-btn-inline"
+                   data-rel="popup" data-position-to="#position-header">Click To Order</a>
+                <div data-role="popup" id="positionSelectordesserts2" class="ui-content" data-theme="a">
+                    <p> Your order completed..</p>
+                </div>
+            </div>
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End desserts 2 Page-->
+    <!---------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start desserts 3 Page-->
+    <!---------------------------------------------------------------->
+    <div id="desserts3" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#desserts">Appetizer</a>
+            <h1>HERSHEY'S TRIPLE CHOCOLATE</h1>
+        </div>
+        <!--End header-->
+        <!--Start content-->
+        <div data-role="content" class="content">
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3>HERSHEY'S TRIPLE CHOCOLATE</h3>
+                <img src="img/1-3.jpg" />
+                <p>9 squares of warm, oven-fresh goodness created with HERSHEY’S cocoa, Special Dark chocolate, and semi-sweet chocolate.</p>
+                <h3 class="ui-bar ui-bar-a" style="color: #b70404;">Price : $5.99</h3>
+                <label for="slider-1">Rate:</label>
+                <input type="range" name="slider-1" id="slider-1" min="0" max="5" value="3" data-popup-enabled="true">
+                <label for="number-1">Quantity:</label>
+                <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="">
+                <a href="#positionSelectordesserts3" class="ui-btn ui-corner-all ui-shadow ui-btn-inline"
+                   data-rel="popup" data-position-to="#position-header">Click To Order</a>
+                <div data-role="popup" id="positionSelectordesserts3" class="ui-content" data-theme="a">
+                    <p> Your order completed..</p>
+                </div>
+            </div>
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End desserts 3 Page-->
+    <!---------------------------------------------------------------->
+
+
+
+
     
-    </style>
+
+
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start Drinks Page-->
+    <!---------------------------------------------------------------->
+    <div id="Drinks" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#Menu">Home</a>
+            <h1>Drinks</h1>
+        </div>
+        <!--End header-->
+        <!--Start content-->
+        <div data-role="content" class="content">
+            <!--Start ul-->
+            <ul data-role="listview" data-filter="true" data-filter-placeholder="Search Drinks..." data-inset="true">
+                <li><a href="#Drinks1">Coca-Cola (1.25L) </a></li>
+                <li><a href="#Drinks2"> Coca-Cola Zero (1.25L) </a></li>
+                <li><a href="#Drinks3"> Diet Coke (1.25L) </a></li>
+                <li><a href="#Drinks4"> Sprite (1.25L) </a></li>
+                <li><a href="#Drinks5"> Fanta (1.25L) </a></li>
+                <li><a href="#Drinks6"> Lift (1.25L) </a></li>
+            </ul>
+            <!--End ul-->
+
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End Drinks Page-->
+    <!---------------------------------------------------------------->
+
+
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start Drinks 1 Page-->
+    <!---------------------------------------------------------------->
+    <div id="Drinks1" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#Drinks">Appetizer</a>
+            <h1>Coca-Cola (1.25L)</h1>
+        </div>
+        <!--End header-->
+        <!--Start content-->
+        <div data-role="content" class="content">
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3>Coca-Cola (1.25L)</h3>
+                <img src="img/2-1.jpg" />
+                <p>Coca-Cola (1.25L) </p>
+                <h3 class="ui-bar ui-bar-a" style="color: #b70404;">Price : $4.50</h3>
+                <label for="slider-1">Rate:</label>
+                <input type="range" name="slider-1" id="slider-1" min="0" max="5" value="3" data-popup-enabled="true">
+                <label for="number-1">Quantity:</label>
+                <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="">
+                <a href="#positionSelectorDrinks1" class="ui-btn ui-corner-all ui-shadow ui-btn-inline"
+                   data-rel="popup" data-position-to="#position-header">Click To Order</a>
+                <div data-role="popup" id="positionSelectorDrinks1" class="ui-content" data-theme="a">
+                    <p> Your order completed..</p>
+                </div>
+            </div>
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End Drinks 1 Page-->
+    <!---------------------------------------------------------------->
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start Drinks 2 Page-->
+    <!---------------------------------------------------------------->
+    <div id="Drinks2" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#Drinks">Coca-Cola Zero (1.25L)</a>
+            <h1>Coca-Cola Zero (1.25L)</h1>
+        </div>
+        <!--End header-->
+        <!--Start content-->
+        <div data-role="content" class="content">
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3>Coca-Cola Zero (1.25L)</h3>
+                <img src="img/2-2.png" />
+                <p>Coca-Cola Zero (1.25L)</p>
+                <h3 class="ui-bar ui-bar-a" style="color: #b70404;">Price : $4.50</h3>
+                <label for="slider-1">Rate:</label>
+                <input type="range" name="slider-1" id="slider-1" min="0" max="5" value="3" data-popup-enabled="true">
+                <label for="number-1">Quantity:</label>
+                <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="">
+                <a href="#positionSelectorDrinks2" class="ui-btn ui-corner-all ui-shadow ui-btn-inline"
+                   data-rel="popup" data-position-to="#position-header">Click To Order</a>
+                <div data-role="popup" id="positionSelectorDrinks2" class="ui-content" data-theme="a">
+                    <p> Your order completed..</p>
+                </div>
+            </div>
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End Drinks 2 Page-->
+    <!---------------------------------------------------------------->
+
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start Drinks 3 Page-->
+    <!---------------------------------------------------------------->
+    <div id="Drinks3" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#Drinks">Coca-Cola Zero (1.25L)</a>
+            <h1> Diet Coke (1.25L) </h1>
+        </div>
+        <!--End header-->
+        <!--Start content-->
+        <div data-role="content" class="content">
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3> Diet Coke (1.25L) </h3>
+                <img src="img/2-3.png" />
+                <p> Diet Coke (1.25L) </p>
+                <h3 class="ui-bar ui-bar-a" style="color: #b70404;">Price : $4.50</h3>
+                <label for="slider-1">Rate:</label>
+                <input type="range" name="slider-1" id="slider-1" min="0" max="5" value="3" data-popup-enabled="true">
+                <label for="number-1">Quantity:</label>
+                <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="">
+                <a href="#positionSelectorDrinks3" class="ui-btn ui-corner-all ui-shadow ui-btn-inline"
+                   data-rel="popup" data-position-to="#position-header">Click To Order</a>
+                <div data-role="popup" id="positionSelectorDrinks3" class="ui-content" data-theme="a">
+                    <p> Your order completed..</p>
+                </div>
+            </div>
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End Drinks 3 Page-->
+    <!---------------------------------------------------------------->
+
+
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start Drinks 4 Page-->
+    <!---------------------------------------------------------------->
+    <div id="Drinks4" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#Drinks">Coca-Cola Zero (1.25L)</a>
+            <h1>  Sprite (1.25L)  </h1>
+        </div>
+        <!--End header-->
+        <!--Start content-->
+        <div data-role="content" class="content">
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3>  Sprite (1.25L)  </h3>
+                <img src="img/2-4.png" />
+                <p>  Sprite (1.25L) </p>
+                <h3 class="ui-bar ui-bar-a" style="color: #b70404;">Price : $4.50</h3>
+                <label for="slider-1">Rate:</label>
+                <input type="range" name="slider-1" id="slider-1" min="0" max="5" value="3" data-popup-enabled="true">
+                <label for="number-1">Quantity:</label>
+                <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="">
+                <a href="#positionSelectorDrinks4" class="ui-btn ui-corner-all ui-shadow ui-btn-inline"
+                   data-rel="popup" data-position-to="#position-header">Click To Order</a>
+                <div data-role="popup" id="positionSelectorDrinks4" class="ui-content" data-theme="a">
+                    <p> Your order completed..</p>
+                </div>
+            </div>
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End Drinks 4 Page-->
+    <!---------------------------------------------------------------->
+
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start Drinks 5 Page-->
+    <!---------------------------------------------------------------->
+    <div id="Drinks5" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#Drinks">Coca-Cola Zero (1.25L)</a>
+            <h1>   Fanta (1.25L)   </h1>
+        </div>
+        <!--End header-->
+        <!--Start content-->
+        <div data-role="content" class="content">
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3>   Fanta (1.25L)  </h3>
+                <img src="img/2-5.png" />
+                <p>   Fanta (1.25L)  </p>
+                <h3 class="ui-bar ui-bar-a" style="color: #b70404;">Price : $4.50</h3>
+                <label for="slider-1">Rate:</label>
+                <input type="range" name="slider-1" id="slider-1" min="0" max="5" value="3" data-popup-enabled="true">
+                <label for="number-1">Quantity:</label>
+                <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="">
+                <a href="#positionSelectorDrinks5" class="ui-btn ui-corner-all ui-shadow ui-btn-inline"
+                   data-rel="popup" data-position-to="#position-header">Click To Order</a>
+                <div data-role="popup" id="positionSelectorDrinks5" class="ui-content" data-theme="a">
+                    <p> Your order completed..</p>
+                </div>
+            </div>
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End Drinks 5 Page-->
+    <!---------------------------------------------------------------->
+
+
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start Drinks 6 Page-->
+    <!---------------------------------------------------------------->
+    <div id="Drinks6" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#Drinks">Coca-Cola Zero (1.25L)</a>
+            <h1>   Lift (1.25L)   </h1>
+        </div>
+        <!--End header-->
+        <!--Start content-->
+        <div data-role="content" class="content">
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3>    Lift (1.25L)   </h3>
+                <img src="img/2-6.png" />
+                <p>    Lift (1.25L)   </p>
+                <h3 class="ui-bar ui-bar-a" style="color: #b70404;">Price : $4.50</h3>
+                <label for="slider-1">Rate:</label>
+                <input type="range" name="slider-1" id="slider-1" min="0" max="5" value="3" data-popup-enabled="true">
+                <label for="number-1">Quantity:</label>
+                <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="">
+                <a href="#positionSelectorDrinks6" class="ui-btn ui-corner-all ui-shadow ui-btn-inline"
+                   data-rel="popup" data-position-to="#position-header">Click To Order</a>
+                <div data-role="popup" id="positionSelectorDrinks6" class="ui-content" data-theme="a">
+                    <p> Your order completed..</p>
+                </div>
+            </div>
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End Drinks 6 Page-->
+    <!---------------------------------------------------------------->
+
+
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start Meals Page-->
+    <!---------------------------------------------------------------->
+    <div id="Meals" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#Menu">Home</a>
+            <h1>Meals</h1>
+        </div>
+        <!--End header-->
+        <!--Start content-->
+        <div data-role="content" class="content">
+            <!--Start ul-->
+            <ul data-role="listview" data-filter="true" data-filter-placeholder="Search Meals..." data-inset="true">
+                <li><a href="#Meals1">Truffle Beef Rossini </a></li>
+                <li><a href="#Meals2">Kimchi BBQ Chicken</a></li>
+                <li><a href="#Meals3">Singapore Chilli Crab</a></li>
+                <li><a href="#Meals4">Sriracha Beef</a></li>
+                <li><a href="#Meals5">Moorish Pulled Lamb</a></li>
+                <li><a href="#Meals6">Pulled Pork & Slaw</a></li>
+            </ul>
+            <!--End ul-->
+
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End Meals Page-->
+    <!---------------------------------------------------------------->
+
+
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start Meals 1 Page-->
+    <!---------------------------------------------------------------->
+    <div id="Meals1" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#Meals"></a>
+            <h1>  Truffle Beef Rossini  </h1>
+        </div>
+        <!--End header-->
+        <!--Start content-->
+        <div data-role="content" class="content">
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3>   Truffle Beef Rossini   </h3>
+                <img src="img/3-1.png" />
+                <p> Wagyu Beef, Wild Mushrooms, Caramelised Onions on a Béchamel base garnished with Fresh Parsley & Basil, topped with Authentic Buffalo Mozzarella & Black Truffle Aioli</p>
+                <h3 class="ui-bar ui-bar-a" style="color: #b70404;">Price : $24</h3>
+                <label for="slider-1">Rate:</label>
+                <input type="range" name="slider-1" id="slider-1" min="0" max="5" value="3" data-popup-enabled="true">
+                <label for="number-1">Quantity:</label>
+                <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="">
+                <a href="#positionSelectorMeals1" class="ui-btn ui-corner-all ui-shadow ui-btn-inline"
+                   data-rel="popup" data-position-to="#position-header">Click To Order</a>
+                <div data-role="popup" id="positionSelectorMeals1" class="ui-content" data-theme="a">
+                    <p> Your order completed..</p>
+                </div>
+            </div>
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End Meals 1 Page-->
+    <!---------------------------------------------------------------->
+
+
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start Meals 2 Page-->
+    <!---------------------------------------------------------------->
+    <div id="Meals2" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#Meals"></a>
+            <h1>  Kimchi BBQ Chicken </h1>
+        </div>
+        <!--End header-->
+        <!--Start content-->
+        <div data-role="content" class="content">
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3>  Kimchi BBQ Chicken  </h3>
+                <img src="img/3-2.png" />
+                <p>Slow Cooked Pulled Chicken marinated in Bulgogi sauce, Shitake Mushrooms, Shallots on a Garlic base, Garnished with Kimchi, Sesame Seeds, Red & Green Chilli</p>
+                <h3 class="ui-bar ui-bar-a" style="color: #b70404;">Price : $22</h3>
+                <label for="slider-1">Rate:</label>
+                <input type="range" name="slider-1" id="slider-1" min="0" max="5" value="3" data-popup-enabled="true">
+                <label for="number-1">Quantity:</label>
+                <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="">
+
+                <a href="#positionSelectorMeals2" class="ui-btn ui-corner-all ui-shadow ui-btn-inline"
+                   data-rel="popup" data-position-to="#position-header">Click To Order</a>
+                <div data-role="popup" id="positionSelectorMeals2" class="ui-content" data-theme="a">
+                    <p> Your order completed..</p>
+                </div>
+                 
+            </div>
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End Meals 2 Page-->
+    <!---------------------------------------------------------------->
+
+
+
+
+
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start Meals 3 Page-->
+    <!---------------------------------------------------------------->
+    <div id="Meals3" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#Meals"></a>
+            <h1>  Singapore Chilli Crab </h1>
+        </div>
+        <!--End header-->
+        <!--Start content-->
+        <div data-role="content" class="content">
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3>  Singapore Chilli Crab  </h3>
+                <img src="img/3-3.png" />
+                <p>Alaskan King Crab, Shallots & Caramelised Onions on a Hoisin Sweet Chilli, Garlic & Tomato base, garnished with Fresh Coriander & Chilli. *Not available on gluten-free base</p>
+                <h3 class="ui-bar ui-bar-a" style="color: #b70404;">Price : $24</h3>
+                <label for="slider-1">Rate:</label>
+                <input type="range" name="slider-1" id="slider-1" min="0" max="5" value="3" data-popup-enabled="true">
+                <label for="number-1">Quantity:</label>
+                <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="">
+                <a href="#positionSelectorMeals3" class="ui-btn ui-corner-all ui-shadow ui-btn-inline"
+                   data-rel="popup" data-position-to="#position-header">Click To Order</a>
+                <div data-role="popup" id="positionSelectorMeals3" class="ui-content" data-theme="a">
+                    <p> Your order completed..</p>
+                </div>
+            </div>
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End Meals 3 Page-->
+    <!---------------------------------------------------------------->
+
+
+
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start Meals 4 Page-->
+    <!---------------------------------------------------------------->
+    <div id="Meals4" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#Meals"></a>
+            <h1>  Sriracha Beef </h1>
+        </div>
+        <!--End header-->
+        <!--Start content-->
+        <div data-role="content" class="content">
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3>  Sriracha Beef  </h3>
+                <img src="img/3-4.png" />
+                <p>Slow Cooked Pulled Beef, Red Capsicum on a Tomato base, Garnished with Pico De Gallo, Avocado, Coriander & Lime, topped with Sriracha mayo</p>
+                <h3 class="ui-bar ui-bar-a" style="color: #b70404;">Price : $22</h3>
+                <label for="slider-1">Rate:</label>
+                <input type="range" name="slider-1" id="slider-1" min="0" max="5" value="3" data-popup-enabled="true">
+                <label for="number-1">Quantity:</label>
+                <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="">
+                <a href="#positionSelectorMeals4" class="ui-btn ui-corner-all ui-shadow ui-btn-inline"
+                   data-rel="popup" data-position-to="#position-header">Click To Order</a>
+                <div data-role="popup" id="positionSelectorMeals4" class="ui-content" data-theme="a">
+                    <p> Your order completed..</p>
+                </div>
+            </div>
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End Meals 4 Page-->
+    <!---------------------------------------------------------------->
+
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start Meals 5 Page-->
+    <!---------------------------------------------------------------->
+    <div id="Meals5" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#Meals"></a>
+            <h1> Moorish Pulled Lamb </h1>
+        </div>
+        <!--End header-->
+        <!--Start content-->
+        <div data-role="content" class="content">
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3>  Moorish Pulled Lamb </h3>
+                <img src="img/3-5.png" />
+                <p>Slow Cooked Pulled Lamb marinated in Moorish spices, Tomatoes, Capsicum Medley, Garbanzos (Chickpea and Chorizo mix) on a tomato base, topped with a Slice of Lemon & Lemon Yoghurt sauce</p>
+                <h3 class="ui-bar ui-bar-a" style="color: #b70404;">Price : $22</h3>
+                <label for="slider-1">Rate:</label>
+                <input type="range" name="slider-1" id="slider-1" min="0" max="5" value="3" data-popup-enabled="true">
+                <label for="number-1">Quantity:</label>
+                <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="">
+                <a href="#positionSelectorMeals5" class="ui-btn ui-corner-all ui-shadow ui-btn-inline"
+                   data-rel="popup" data-position-to="#position-header">Click To Order</a>
+                <div data-role="popup" id="positionSelectorMeals5" class="ui-content" data-theme="a">
+                    <p> Your order completed..</p>
+                </div>
+            </div>
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End Meals 5 Page-->
+    <!---------------------------------------------------------------->
+
+
     
+    
+
+    <!---------------------------------------------------------------->
+    <!--Start Meals 6 Page-->
+    <!---------------------------------------------------------------->
+    <div id="Meals6" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#Meals"></a>
+            <h1>  Pulled Pork & Slaw </h1>
+        </div>
+        <!--End header-->
+        <!--Start content-->
+        <div data-role="content" class="content">
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3>  Pulled Pork & Slaw  </h3>
+                <img src="img/3-6.png" />
+                <p>Twice Cooked Shredded Pork & Caramelised Onions on a BBQ base topped with Fresh Pear, Vietnamese Slaw & Garlic Aioli. *Not available on gluten-free base</p>
+                <h3 class="ui-bar ui-bar-a" style="color: #b70404;">Price : $24</h3>
+                <label for="slider-1">Rate:</label>
+                <input type="range" name="slider-1" id="slider-1" min="0" max="5" value="3" data-popup-enabled="true">
+                <label for="number-1">Quantity:</label>
+                <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="">
+                <a href="#positionSelectorMeals6" class="ui-btn ui-corner-all ui-shadow ui-btn-inline"
+                   data-rel="popup" data-position-to="#position-header">Click To Order</a>
+                <div data-role="popup" id="positionSelectorMeals6" class="ui-content" data-theme="a">
+                    <p> Your order completed..</p>
+                </div>
+            </div>
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End Meals 6 Page-->
+    <!---------------------------------------------------------------->
+
+
+
+
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start Navgation Page-->
+    <!---------------------------------------------------------------->
+    <div id="Navigation" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed">
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#home">Home</a>
+            <h1>Navigation</h1>
+        </div>
+        <!--End header-->
+        <center>
+            <img src="img/6-512.png" />
+        </center>
+        <!--Start content-->
+        <div data-role="content">
+            <div class="ui-body ui-body-a ui-corner-all">
+                <div id="googleMap" class="ui-body ui-body-a ui-corner-all" style="height:400px;"></div>
+            </div>
+            </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End Navgation Page-->
+    <!---------------------------------------------------------------->
+
+
+
+
+
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start FeedBack Page-->
+    <!---------------------------------------------------------------->
+    <div id="FeedBack" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#home">Home</a>
+            <h1>FeedBack</h1>
+        </div>
+        <!--End header-->
+        <center>
+            <img src="img/feedback.png" />
+        </center>        
+        <!--Start content-->
+        <div data-role="content" class="content">
+            <label for="text-basic">Cutomer Name:</label>
+            <input type="text" name="text-basic" id="text-basic" value="">
+            <label for="tel">Contact Information:</label>
+            <input type="tel" name="tel" id="tel" value="">
+            <label for="textarea">FeedBack:</label>            
+            <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+            <a href="#positionSelector" class="ui-btn ui-corner-all ui-shadow ui-btn-inline"
+               data-rel="popup" data-position-to="#position-header">Submit</a>
+            <div data-role="popup" id="positionSelector" class="ui-content" data-theme="a">
+                <p> Thank you for feedback..</p>
+            </div>
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End FeedBack Page-->
+    <!---------------------------------------------------------------->
+
+
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start Developer Page-->
+    <!---------------------------------------------------------------->
+    <div id="Developer" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#home">Home</a>
+            <h1>Information</h1>
+        </div>
+        <!--End header-->
+        <center>
+          
+        </center>
+        <!--Start content-->
+        <div data-role="content" class="content">
+          
+            <h3 class="ui-bar ui-bar-a ui-corner-all">Developer</h3>
+            <div class="ui-body ui-body-a ui-corner-all">
+                <p>Name: Alruwaili, Abdulaziz Abdullah</p>
+                <p>Tel: 0412484312</p>
+                <p>Mail: aalruwai@Deakin.edu.au</p>
+                <p>Student ID: 212545087</p>
+                
+            </div>
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+            <h4>Pizoo</h4>
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End Developer Page-->
+    <!---------------------------------------------------------------->
+
+
+
+
+
+    <!---------------------------------------------------------------->
+    <!--Start Callus Page-->
+    <!---------------------------------------------------------------->
+    <div id="Click-To-Call" data-role="page">
+        <!--Start header-->
+        <div class="header" data-role="header" data-position="fixed" >
+            <a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" href="#home">Home</a>
+            <h1>Click-To-Call</h1>
+        </div>
+        <!--End header-->
+        <center>
+            <img src="img/call.png" />
+        </center>
+        <!--Start content-->
+        <div data-role="content" class="content">
+            <a href="tel:0412484312" data-icon="phone" data-role="button">0412484312</a>
+        </div>  <!--End content-->
+        <div data-role="footer" data-position="fixed">
+           
+        </div>
+    </div>
+    <!---------------------------------------------------------------->
+    <!--End Callus Page-->
+    <!---------------------------------------------------------------->
+
+
+
+
+
+
+
+
+</body>
 </html>
